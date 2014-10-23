@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Vendorname:</strong>
+  <strong>Vendor Name:</strong>
   <%= @vendor.vendorname %>
 </p>
 
 <p>
-  <strong>Itemname:</strong>
+  <strong>Item Name:</strong>
   <%= @vendor.itemname %>
 </p>
 
 <p>
-  <strong>Pricepunit:</strong>
+  <strong>Price Per Unit:</strong>
   <%= @vendor.pricepunit %>
 </p>
 
 <p>
-  <strong>Address1:</strong>
+  <strong>Address Line 1:</strong>
   <%= @vendor.address1 %>
 </p>
 
 <p>
-  <strong>Address2:</strong>
+  <strong>Address Line 2:</strong>
   <%= @vendor.address2 %>
 </p>
 
@@ -36,9 +36,9 @@
 </p>
 
 <p>
-  <strong>Zipcode:</strong>
+  <strong>Zip Code:</strong>
   <%= @vendor.zipcode %>
 </p>
 
 <%= link_to 'Edit', edit_vendor_path(@vendor) %> |
-<%= link_to 'Back', vendors_path %>
+<%= link_to 'Home', root_path %>

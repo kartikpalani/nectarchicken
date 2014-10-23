@@ -1,16 +1,16 @@
 <h1>Listing vendors</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
-      <th>Vendorname</th>
-      <th>Itemname</th>
-      <th>Pricepunit</th>
-      <th>Address1</th>
-      <th>Address2</th>
+      <th>Name</th>
+      <th>Item Name</th>
+      <th>Price Per Unit</th>
+      <th>Address Line 1</th>
+      <th>Address Line 2</th>
       <th>City</th>
       <th>State</th>
-      <th>Zipcode</th>
+      <th>Zip Code</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,4 +36,5 @@
 
 <br>
 
-<%= link_to 'New Vendor', new_vendor_path %>
+<button class="btn btn-lg btn-default"><%= link_to 'Home', root_path %></button>
+<button class="btn btn-lg btn-default"><%= link_to 'New Vendor', new_vendor_path %></button>
