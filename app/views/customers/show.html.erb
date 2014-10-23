@@ -1,39 +1,96 @@
-<p id="notice"><%= notice %></p>
+<head>
 
-<p>
-  <strong>First Name:</strong>
-  <%= @customer.firstname %>
-</p>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<p>
-  <strong>Last Name:</strong>
-  <%= @customer.lastname %>
-</p>
+    <title>Nectar Chicken Company</title>
 
-<p>
-  <strong>Address Line 1:</strong>
-  <%= @customer.address1 %>
-</p>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<p>
-  <strong>Address line 2:</strong>
-  <%= @customer.address2 %>
-</p>
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
 
-<p>
-  <strong>City:</strong>
-  <%= @customer.city %>
-</p>
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-<p>
-  <strong>State:</strong>
-  <%= @customer.state %>
-</p>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-<p>
-  <strong>Zip Code:</strong>
-  <%= @customer.zipcode %>
-</p>
+</head>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Home', root_path %>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="../">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Nectar</span> Chicken Co.
+                </a>
+            </div>
+
+
+        </div>
+
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2"> 
+                      <p id="notice"><%= notice %></p>
+
+                      <p>
+                        <strong>First Name:</strong>
+                        <%= @customer.firstname %>
+                      </p>
+
+                      <p>
+                        <strong>Last Name:</strong>
+                        <%= @customer.lastname %>
+                      </p>
+
+                      <p>
+                        <strong>Address Line 1:</strong>
+                        <%= @customer.address1 %>
+                      </p>
+
+                      <p>
+                        <strong>Address line 2:</strong>
+                        <%= @customer.address2 %>
+                      </p>
+
+                      <p>
+                        <strong>City:</strong>
+                        <%= @customer.city %>
+                      </p>
+
+                      <p>
+                        <strong>State:</strong>
+                        <%= @customer.state %>
+                      </p>
+
+                      <p>
+                        <strong>Zip Code:</strong>
+                        <%= @customer.zipcode %>
+                      </p>
+                      <button class="btn btn-lg btn-default"><%= link_to 'Edit', edit_customer_path(@customer) %></button> 
+                          </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
