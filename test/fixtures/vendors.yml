@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vendorname: MyString
+  itemname: MyString
+  pricepunit: 1.5
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+
+two:
+  vendorname: MyString
+  itemname: MyString
+  pricepunit: 1.5
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
