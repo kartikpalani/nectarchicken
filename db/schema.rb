@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208084241) do
+ActiveRecord::Schema.define(version: 20141209060922) do
 
   create_table "balance_sheets", force: true do |t|
     t.integer  "cash"
@@ -64,6 +64,23 @@ ActiveRecord::Schema.define(version: 20141208084241) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "asset_name"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.decimal  "costprice"
+    t.decimal  "sellprice"
+    t.integer  "vendor_id"
+    t.integer  "customer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "quantity"
+    t.decimal  "amt_paid"
+    t.decimal  "amt_debt"
+    t.decimal  "amt_sold"
+    t.decimal  "amt_loaned"
+    t.integer  "buy_quantity"
+    t.integer  "sell_quantity"
   end
 
   create_table "vendors", force: true do |t|

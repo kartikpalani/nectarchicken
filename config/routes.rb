@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+
   resources :bills
 
   resources :fixed_assets
@@ -25,7 +27,13 @@ Rails.application.routes.draw do
   match "/payroll" => 'employees#payroll', as:"payroll",:via => [:get, :post]
 
   match "/incomestatement" => 'balance_sheets#incomestatement', as:"income",:via => [:get, :post]
-  # The priority is based upon order of creation: first created -> highest priority.
+
+  match "/buy/:id" => "products#buy", as:"buy", :via => [:get, :post]
+  match "/sell/:id" => "products#sell", as:"sell", :via => [:get, :post]
+
+  match "/purchase/:id" => "products#purchase", as:"purchase", :via => [:get, :post]  # The priority is based upon order of creation: first created -> highest priority.
+  match "/hawk/:id" => "products#hawk", as:"hawk", :via => [:get, :post]
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

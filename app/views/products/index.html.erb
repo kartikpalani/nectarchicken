@@ -1,0 +1,38 @@
+<h1>Inventory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost Price per unit</th>
+      <th>Sell Price per unit</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Re-Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.costprice %></td>
+        <td><%= product.sellprice %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.costprice * product.quantity %></td>
+        <% if (product.quantity < 50 )%>
+            <td>yes</td>
+        <% else%>
+            <td></td>
+        <% end %>
+        <td><button><%= link_to 'Buy', buy_path(product) %></button></td>
+        <td><button><%= link_to 'Sell', sell_path(product) %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

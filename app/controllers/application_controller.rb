@@ -10,4 +10,7 @@ class ApplicationController < ActionController::Base
   $cogs = 0
   $sales = 0
   $bills = 0
+  $receivable = 0
+  $payable = 0
+  $inventory_total = 0
 end

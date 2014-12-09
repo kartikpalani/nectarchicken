@@ -71,7 +71,7 @@
             <tbody>
             <% @employees.each do |employee| %>
                 <tr>
-                  <td><%= Time.now.strftime("%d/%m/%Y")%></td>
+                  <td><%= employee.pay_date%></td>
                   <td><%= employee.firstname %></td>
                   <td><%= employee.lastname %></td>
                   <td><%= 0.75 * employee.salary %></td>

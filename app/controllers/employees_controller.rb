@@ -73,6 +73,7 @@ class EmployeesController < ApplicationController
     $withholding = $withholding + (0.25 * pay)
     puts $cash
     puts @employee.pay_date
+    @employee.save
     redirect_to "/balance_sheets"
   end
 
