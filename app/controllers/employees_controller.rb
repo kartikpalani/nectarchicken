@@ -61,6 +61,25 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def pay
+    @employee = Employee.find(params[:id])
+    pay = @employee.salary
+    @paid_date = Time.now
+    @employee.pay_date = @paid_date
+    $payroll = $payroll + (0.75 * pay)
+    puts pay
+    puts $cash
+    $cash = $cash - pay
+    $withholding = $withholding + (0.25 * pay)
+    puts $cash
+    puts @employee.pay_date
+    redirect_to "/balance_sheets"
+  end
+
+  def payroll
+    @employees = Employee.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_employee
@@ -69,6 +88,6 @@ class EmployeesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:firstname, :lastname, :address1, :address2, :city, :state, :zipcode, :ssn, :withholding, :salary)
+      params.require(:employee).permit(:firstname, :lastname, :address1, :address2, :city, :state, :zipcode, :ssn, :withholding, :salary, :pay_date)
     end
 end

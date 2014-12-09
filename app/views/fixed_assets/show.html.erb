@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Asset Name:</strong>
+  <%= @fixed_asset.asset_name %>
+</p>
+<p>
+  <strong>Asset cost:</strong>
+  <%= @fixed_asset.asset_cost %>
+</p>
+
+<p>
+  <strong>Asset loan:</strong>
+  <%= @fixed_asset.asset_loan %>
+</p>
+
+<p>
+  <strong>Asset paid:</strong>
+  <%= @fixed_asset.asset_paid %>
+</p>
+
+<%= link_to 'Edit', edit_fixed_asset_path(@fixed_asset) %> |
+<%= link_to 'Back', fixed_assets_path %>

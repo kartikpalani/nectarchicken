@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :bills
+
+  resources :fixed_assets
+
+  resources :balance_sheets
+
   resources :employees
 
   resources :vendors
@@ -13,6 +19,12 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
 
+  match "/pay/:id" => "employees#pay", as:"pay" ,:via => [:get, :post]
+  match "/bill/pay/:id" => "bills#pay", as:"pay_bill" ,:via => [:get, :post]
+
+  match "/payroll" => 'employees#payroll', as:"payroll",:via => [:get, :post]
+
+  match "/incomestatement" => 'balance_sheets#incomestatement', as:"income",:via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022025222) do
+ActiveRecord::Schema.define(version: 20141208084241) do
+
+  create_table "balance_sheets", force: true do |t|
+    t.integer  "cash"
+    t.integer  "inventory_total"
+    t.integer  "receivable"
+    t.integer  "payable"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bills", force: true do |t|
+    t.decimal  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
 
   create_table "customers", force: true do |t|
     t.string   "firstname"
@@ -38,6 +54,16 @@ ActiveRecord::Schema.define(version: 20141022025222) do
     t.float    "salary"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "pay_date"
+  end
+
+  create_table "fixed_assets", force: true do |t|
+    t.integer  "asset_cost"
+    t.integer  "asset_loan"
+    t.integer  "asset_paid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "asset_name"
   end
 
   create_table "vendors", force: true do |t|

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asset_cost: 1
+  asset_loan: 1
+  asset_paid: 1
+
+two:
+  asset_cost: 1
+  asset_loan: 1
+  asset_paid: 1

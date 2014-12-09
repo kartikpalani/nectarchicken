@@ -1,0 +1,107 @@
+<h1>Balance Sheet</h1>
+
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg .tg-hgcj{font-weight:bold;text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-hgcj" colspan="2">Assets</th>
+    <th class="tg-hgcj" colspan="2">Liabilities</th>
+  </tr>
+  <tr>
+    <td class="tg-031e" colspan="2">Current Assets</td>
+    <td class="tg-031e" colspan="2">Current Liabilities</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Cash ($)</td>
+    <td class="tg-031e"><%= $cash %></td>
+    <td class="tg-031e">Payables ($)</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Receivables ($)</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Inventory ($)</td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Withholding ($)</td>
+    <td class="tg-031e"><%= $withholding %></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e" colspan="2">Fixed Assets</td>
+    <td class="tg-031e" colspan="2">Long Term Debt</td>
+  </tr>
+  <tr>
+    <td class="tg-031e" colspan="2"><a href="./fixed_assets">View All Fixed Assets</a></td>
+    <td class="tg-031e">Loan ($)</td>
+    <td class="tg-031e"><%= $asset_loan_total %></td>
+  </tr>
+
+</table>
+
+<p></p>
+<p></p>
+<p></p>
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg .tg-e3zv{font-weight:bold}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-e3zv">Total Assets ($)</th>
+    <th class="tg-e3zv"></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">Total Current Assets ($)</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Total Fixed Assets ($)</td>
+    <td class="tg-031e"><%= $asset_cost_total%></td>
+  </tr>
+</table>
+
+<p></p>
+<p></p>
+<p></p>
+
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg .tg-e3zv{font-weight:bold}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-e3zv">Total Liabilities ($)</th>
+    <th class="tg-e3zv"></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">Total Current Liabilities ($)</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Total Long Term Debt ($)</td>
+    <td class="tg-031e"><%= $asset_loan_total %></td>
+  </tr>
+</table>
+
+<p></p>
+<p></p>
+<p></p>
+
+<h5>Net Worth: $</h5>

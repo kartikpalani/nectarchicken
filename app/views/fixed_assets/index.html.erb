@@ -1,0 +1,28 @@
+<h1>Listing fixed_assets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Asset name</th>
+      <th>Asset cost</th>
+      <th>Asset loan</th>
+      <th>Asset paid</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fixed_assets.each do |fixed_asset| %>
+      <tr>
+        <td><%= fixed_asset.asset_name %></td>
+        <td><%= fixed_asset.asset_cost %></td>
+        <td><%= fixed_asset.asset_loan %></td>
+        <td><%= fixed_asset.asset_paid %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fixed asset', new_fixed_asset_path %>

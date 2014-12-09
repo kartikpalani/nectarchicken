@@ -1,0 +1,54 @@
+<h1>Income Statement</h1>
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg .tg-e3zv{font-weight:bold}
+    .tg .tg-hgcj{font-weight:bold;text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Sales ($)</th>
+    <th class="tg-031e"><%= $sales%></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">COGS ($)</td>
+    <td class="tg-031e"><%= $cogs%></td>
+  </tr>
+  <tr>
+    <td class="tg-e3zv">Gross Profit ($)</td>
+    <td class="tg-031e"><%= @profit%></td>
+  </tr>
+  <tr>
+    <td class="tg-hgcj" colspan="2">Expenses</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Payroll ($)</td>
+    <td class="tg-031e"><%= $payroll%></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Payroll Withholding ($)</td>
+    <td class="tg-031e"><%= $withholding%></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bills ($)</td>
+    <td class="tg-031e"><%= $bills%></td>
+  </tr>
+  <tr>
+    <td class="tg-e3zv">Total Expenses ($)</td>
+    <td class="tg-031e"><%= @expenses%></td>
+  </tr>
+  <tr>
+    <td class="tg-e3zv">Operating Income ($)</td>
+    <td class="tg-031e"><%= @op_income%></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Income Taxes (20%) ($)</td>
+    <td class="tg-031e"><%= @tax%></td>
+  </tr>
+  <tr>
+    <td class="tg-e3zv">Net Income ($)</td>
+    <td class="tg-031e"><%= @net_income%></td>
+  </tr>
+
+</table>
