@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
         if product_params[:type] == "buy"
           format.html { redirect_to purchase_path, notice: 'Product was successfully bought.' }
           format.json { render :show, status: :ok, location: @product }
-        else if product_params[:type] == "sell"
+        elsif product_params[:type] == "sell"
           format.html { redirect_to hawk_path, notice: 'Product was successfully sold.' }
         end
       else
