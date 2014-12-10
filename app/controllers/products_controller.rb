@@ -43,11 +43,12 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        if product_params[:type] == "buy"
+        if params[:type] == "buy"
           format.html { redirect_to purchase_path, notice: 'Product was successfully bought.' }
           format.json { render :show, status: :ok, location: @product }
-        elsif product_params[:type] == "sell"
+        elsif params[:type] == "sell"
           format.html { redirect_to hawk_path, notice: 'Product was successfully sold.' }
+          format.json { render :show, status: :ok, location: @product }
         end
       else
 
