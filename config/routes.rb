@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   match "/purchase/:id" => "products#purchase", as:"purchase", :via => [:get, :post]  # The priority is based upon order of creation: first created -> highest priority.
   match "/hawk/:id" => "products#hawk", as:"hawk", :via => [:get, :post]
 
+  match "/pay_tax" => "static_pages#pay_tax", as:"pay_tax", :via => [:get, :post]
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

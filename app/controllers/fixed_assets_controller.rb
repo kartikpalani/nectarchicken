@@ -24,7 +24,7 @@ class FixedAssetsController < ApplicationController
     $cash = $cash - fixed_asset_paid
     respond_to do |format|
       if @fixed_asset.save
-        format.html { redirect_to @fixed_asset, notice: 'Fixed asset was successfully created.' }
+        format.html { redirect_to fixed_assets_path, notice: 'Fixed asset was successfully created.' }
         format.json { render :show, status: :created, location: @fixed_asset }
       else
         format.html { render :new }

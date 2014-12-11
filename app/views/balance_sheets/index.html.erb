@@ -63,11 +63,11 @@
 <table class="tg">
   <tr>
     <th class="tg-e3zv">Total Assets ($)</th>
-    <th class="tg-e3zv"></th>
+    <th class="tg-e3zv"><%= $cash + $receivable + $inventory_total + $withholding + $asset_cost_total%></th>
   </tr>
   <tr>
     <td class="tg-031e">Total Current Assets ($)</td>
-    <td class="tg-031e"></td>
+    <td class="tg-031e"><%= $cash + $receivable + $inventory_total + $withholding%></td>
   </tr>
   <tr>
     <td class="tg-031e">Total Fixed Assets ($)</td>
@@ -88,11 +88,11 @@
 <table class="tg">
   <tr>
     <th class="tg-e3zv">Total Liabilities ($)</th>
-    <th class="tg-e3zv"></th>
+    <th class="tg-e3zv"><%= $payable + $asset_loan_total%></th>
   </tr>
   <tr>
     <td class="tg-031e">Total Current Liabilities ($)</td>
-    <td class="tg-031e"></td>
+    <td class="tg-031e"><%= $payable%></td>
   </tr>
   <tr>
     <td class="tg-031e">Total Long Term Debt ($)</td>
@@ -104,4 +104,4 @@
 <p></p>
 <p></p>
 
-<h5>Net Worth: $</h5>
+<h5>Net Worth: $<%= $cash + $receivable + $inventory_total + $withholding + $asset_cost_total - ($payable + $asset_loan_total)%></h5>
